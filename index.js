@@ -12,11 +12,11 @@ const PORT = 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json());
-
+console.log("mongoose")
 // Middleware to ensure DB connection is available before processing routes
 mongoose
   .connect("mongodb+srv://test:test@code-crack.z7pjg.mongodb.net/?retryWrites=true&w=majority&appName=Code-Crack")
-  .then(() => console.log('MongoDB Connected'.green))
+  .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.log("Error:", err.red));
 
   app.use(bodyParser.json());
